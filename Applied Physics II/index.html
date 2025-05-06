@@ -70,17 +70,17 @@
         <h1 id="subject-title"></h1>
         <p>Select a chapter to explore:</p>
         <div class="chapter-list">
-            <button class="chapter-button" onclick="saveChapter(0)">Model paper</button>
-            <button class="chapter-button" onclick="saveChapter(1)">Chapter 1</button>
-            <button class="chapter-button" onclick="saveChapter(2)">Chapter 2</button>
-            <button class="chapter-button" onclick="saveChapter(3)">Chapter 3</button>
-            <button class="chapter-button" onclick="saveChapter(4)">Chapter 4</button>
-            <button class="chapter-button" onclick="saveChapter(5)">Chapter 5</button>
-            <button class="chapter-button" onclick="saveChapter(6)">Chapter 6</button>
-            <button class="chapter-button" onclick="saveChapter(7)">Chapter 7</button>
-            <button class="chapter-button" onclick="saveChapter(8)">All Chapter Pdf</button>
-            <button class="chapter-button" onclick="saveChapter(9)">Important Questions</button>
-            <button class="chapter-button" onclick="saveChapter(10)">MCQ practice</button>
+            <button class="chapter-button" onclick="saveChapter('Model Paper')">Model Paper</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 1')">Chapter 1</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 2')">Chapter 2</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 3')">Chapter 3</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 4')">Chapter 4</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 5')">Chapter 5</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 6')">Chapter 6</button>
+            <button class="chapter-button" onclick="saveChapter('Chapter 7')">Chapter 7</button>
+            <button class="chapter-button" onclick="saveChapter('All Chapters PDF')">All Chapters PDF</button>
+            <button class="chapter-button" onclick="saveChapter('Important Questions')">Important Questions</button>
+            <button class="chapter-button" onclick="saveChapter('MCQ Practice')">MCQ Practice</button>
         </div>
     </div>
 
@@ -94,11 +94,11 @@
         // Set the title dynamically
         document.getElementById('page-title').innerText = `${selectedSubject} Gtech-Poly`;
         
-        function saveChapter(chapterNumber) {
-            // Save the selected chapter number to local storage
-            localStorage.setItem('selectedChapter', chapterNumber);
-            // Redirect to chapter<chapterNumber>/chapter.html
-            window.location.href = `chapter${chapterNumber}/chapter.html`;
+        function saveChapter(chapterName) {
+            // Save the selected chapter name to local storage
+            localStorage.setItem('selectedChapter', chapterName);
+            // Redirect to the page using the exact chapter name (no changes)
+            window.location.href = `${chapterName}/chapter.html`;
         }
     </script>
 
